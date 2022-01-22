@@ -1,21 +1,23 @@
-
-
 body{
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	min-height: 100vh;
 	font-size: .7rem;
 	font-family: helvetica, san-serif;
-	border: 1px solid red;
 	margin: 0;
 	background-color: hsl(270, 20%, 96%);
 	position: relative;
 	font-family: 'Rubik', sans-serif;
+	overflow: hidden;
 }
 
 body::before{
 	content: "";
 	width: 420px;
-	height: 700px;
+	height: 80%;
+	background-image: -webkit-gradient(linear,left top, left bottom,from(hsl(293, 100%, 63%)),to(hsl(264, 100%, 61%)));
+	background-image: -o-linear-gradient(hsl(293, 100%, 63%),hsl(264, 100%, 61%));
 	background-image: linear-gradient(hsl(293, 100%, 63%),hsl(264, 100%, 61%));
 	position: absolute;
 	left: -5%;
@@ -25,7 +27,7 @@ body::before{
 body::after{
 	content: "";
 	width: 420px;
-	height: 700px;
+	height: 80%;
 	background-color: hsl(293, 100%, 63%, .1);
 	position: absolute;
 	bottom: 0;
@@ -36,13 +38,24 @@ body::after{
 
 .app{
 	margin:auto;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: column;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
 }
 .wrap{
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
 	margin: 10% 10% 0 10%;
+	-ms-flex-line-pack: center;
+	    align-content: center;
 }
 .app_phone{
 	max-width: 320px;
@@ -50,14 +63,18 @@ body::after{
 	background-color: white;
 	border-radius: 40px;
 	padding: 1em;
-	box-sizing: border-box;
-	box-shadow: 10px 10px 10px hsl(270, 7%, 64%, .3);
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	-webkit-box-shadow: 10px 10px 10px hsl(270, 7%, 64%, .3);
+	        box-shadow: 10px 10px 10px hsl(270, 7%, 64%, .3);
 	position: relative;
 }
 
 
 
 .app_phone--header{
+	background-image: -webkit-gradient(linear, right top, left top, from(hsl(293, 100%, 63%)),to(hsl(264, 100%, 61%)));
+	background-image: -o-linear-gradient(right, hsl(293, 100%, 63%),hsl(264, 100%, 61%));
 	background-image: linear-gradient(to left, hsl(293, 100%, 63%),hsl(264, 100%, 61%));
 	border-radius: 30px 30px 0 0;
 	padding: 1em;
@@ -72,7 +89,9 @@ body::after{
 	position: absolute;
 	top: 0;
 	left: 50%;
-	transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+	    -ms-transform: translateX(-50%);
+	        transform: translateX(-50%);
 	z-index: 1;
 	border-radius: 50px;
 }
@@ -102,8 +121,13 @@ body::after{
 	padding: 1.25em;
 	background-color: hsl(270, 20%, 96%);
 	border-radius: 0 0 30px 30px;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: column;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
 }
 
 
@@ -125,12 +149,19 @@ body::after{
 	background-color: white;
 	border-radius: 15px 15px 5px 15px;
 	color: black;
-	align-self: flex-end;
+	-ms-flex-item-align: end;
+	    align-self: flex-end;
 }
 .app_phone--wrap--text li:nth-child(7), ul li:nth-child(8){
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: space-between;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
 	padding: 1em;
+	background-image: -webkit-gradient(linear, left top, right top, from(hsl(293, 100%, 63%)),to(hsl(264, 100%, 61%)));
+	background-image: -o-linear-gradient(left, hsl(293, 100%, 63%),hsl(264, 100%, 61%));
 	background-image: linear-gradient(to right, hsl(293, 100%, 63%),hsl(264, 100%, 61%));
 	border-radius: 15px 15px 15px 5px;
 	color: hsl(206, 6%, 79%);
@@ -150,7 +181,9 @@ body::after{
 	border-radius: 100%;
 	position: absolute;
 	top: 50%;
-	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	    -ms-transform: translateY(-50%);
+	        transform: translateY(-50%);
 }
 
 .app_phone--wrap--text li span{
@@ -180,13 +213,20 @@ body::after{
 	position: absolute;
 	right: .5em;
 	top: 50%;
-	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	    -ms-transform: translateY(-50%);
+	        transform: translateY(-50%);
 }
 .app_phone--wrap--text .dogs{
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: flex-end;
+	-webkit-box-pack: end;
+	    -ms-flex-pack: end;
+	        justify-content: flex-end;
 	padding-right: 0;
-	align-self: flex-end;	
+	-ms-flex-item-align: end;
+	    align-self: flex-end;	
 
 }
 .dogs img {
@@ -202,7 +242,9 @@ body::after{
 
 .app__description{
 	width: 45%;
-	align-self: center;
+	-ms-flex-item-align: center;
+	    -ms-grid-row-align: center;
+	    align-self: center;
 	margin-left: 8rem;
 }
 .app__description h1{
@@ -225,9 +267,16 @@ body::after{
 
 @media (max-width: 764px){
 	.wrap{
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
-		flex-direction: column;
-		align-items: center;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+		-webkit-box-align: center;
+		    -ms-flex-align: center;
+		        align-items: center;
 		
 	}
 	
